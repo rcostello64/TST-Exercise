@@ -2,7 +2,6 @@ let app = (function() {
   let state = {};
 
   let init = () => {
-    console.log(getState());
     state = getState();
     popFields(state);
     events();
@@ -13,7 +12,6 @@ let app = (function() {
 
     document.querySelectorAll("input").forEach(input => {
       input.addEventListener("keyup", e => {
-        console.log(e.target.value);
         state[e.target.id] = e.target.value;
         setState(state);
       });
@@ -93,7 +91,6 @@ let app = (function() {
   };
 
   const submitData = data => {
-    //make call to submit data
     console.log(JSON.stringify(data));
   };
 
