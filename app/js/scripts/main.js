@@ -93,7 +93,6 @@ let app = (function() {
   };
 
   const submitData = data => {
-    //make call to submit data
     console.log(JSON.stringify(data));
   };
 
