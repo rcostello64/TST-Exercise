@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body,
+main,
+form {
+  width: 100vw;
+  background-color: #88bdbc;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  display: flex;
+  min-height: 100vh;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 2.2rem 1.5rem;
+  border-radius: 5px;
+  color: #88bdbc;
+}
+fieldset div {
+  width: 100%;
+}
+fieldset input {
+  width: 100%;
+  appearance: none;
+  outline: none;
+  border: 2px solid #88bdbc;
+  padding: 10px;
+  color: #254e58;
+  font-size: 1rem;
+}
+fieldset label {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+fieldset label div {
+  width: 100%;
+  margin: 0 0 5px;
+  color: #254e58;
+  display: flex;
+  align-items: center;
+}
+fieldset label .valid {
+  width: 15px;
+  margin: 0 0.5rem 0 auto;
+  display: none;
+}
+fieldset label .invalid {
+  margin: 0 0.5rem 0 auto;
+  color: #770303;
+  display: none;
+  font-size: 0.9rem;
+}
+fieldset button {
+  align-self: center;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #254e58;
+  margin: 1rem 0 3rem;
+  cursor: pointer;
+}
+fieldset .pwMatch {
+  color: #770303;
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  display: none;
+}
+fieldset .instructions {
+  margin: 0 0 5px;
+  color: #254e58;
+}
+fieldset .instructions p {
+  font-weight: bold;
+}
+fieldset ul {
+  width: 100%;
+  padding: 5px 5% 0;
+}
+fieldset ul li {
+  padding: 0 0 3px;
+}
