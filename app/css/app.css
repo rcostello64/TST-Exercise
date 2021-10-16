@@ -65,17 +65,11 @@ fieldset label div {
   display: flex;
   align-items: center;
 }
-fieldset label .valid {
-  width: 15px;
-  margin: 0 0.5rem 0 auto;
-  display: none;
-}
+fieldset label .valid,
 fieldset label .invalid {
   width: 15px;
   margin: 0 0.5rem 0 auto;
-  color: #770303;
   display: none;
-  font-size: 0.9rem;
 }
 fieldset button {
   align-self: center;

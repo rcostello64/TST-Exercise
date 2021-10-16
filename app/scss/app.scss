@@ -71,18 +71,11 @@ fieldset {
       align-items: center;
     }
 
-    .valid {
-      width: 15px;
-      margin: 0 0.5rem 0 auto;
-      display: none;
-    }
-
+    .valid,
     .invalid {
       width: 15px;
       margin: 0 0.5rem 0 auto;
-      color: $red;
       display: none;
-      font-size: 0.9rem;
     }
   }
 
