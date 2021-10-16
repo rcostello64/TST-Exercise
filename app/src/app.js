@@ -1,13 +1,13 @@
 let app = (function() {
   let state = {};
 
-  let init = () => {
+  const init = () => {
     state = getState();
     popFields(state);
     events();
   };
 
-  let events = () => {
+  const events = () => {
     document.querySelector("#submit").addEventListener("click", collectData);
 
     document.querySelectorAll("input").forEach(input => {
@@ -18,13 +18,13 @@ let app = (function() {
     });
   };
 
-  let collectData = () => {
+  const collectData = () => {
     if (validateForm()) {
       submitData(formatData());
     }
   };
 
-  let validateForm = () => {
+  const validateForm = () => {
     let username = valUserNameField("username");
     invalidField(username, "userNameField");
 
@@ -40,27 +40,27 @@ let app = (function() {
     return username && password && confirmPassword && pwMatch;
   };
 
-  let valUserNameField = field => {
+  const valUserNameField = field => {
     const pattern = /^([a-zA-Z0-9]){8,12}$/,
       username = document.querySelector(`#${field}`).value;
 
     return pattern.test(username);
   };
 
-  let validatePwField = field => {
+  const validatePwField = field => {
     const pattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}/,
       pw = document.querySelector(`#${field}`).value;
     return pattern.test(pw);
   };
 
-  let checkPwMatch = (field1, field2) => {
+  const checkPwMatch = (field1, field2) => {
     const pw1 = document.querySelector(`#${field1}`).value;
     const pw2 = document.querySelector(`#${field2}`).value;
 
     return pw1 === pw2;
   };
 
-  let invalidField = (isValid, id) => {
+  const invalidField = (isValid, id) => {
     let invalid = document.querySelector(`#${id} .invalid`);
     let valid = document.querySelector(`#${id} .valid`);
 
@@ -73,7 +73,7 @@ let app = (function() {
     }
   };
 
-  let invalidPwField = (isValid, elem) => {
+  const invalidPwField = (isValid, elem) => {
     let pwMatch = document.querySelector(`.${elem}`);
 
     if (isValid) {
