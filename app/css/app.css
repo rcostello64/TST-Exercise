@@ -71,6 +71,7 @@ fieldset label .valid {
   display: none;
 }
 fieldset label .invalid {
+  width: 15px;
   margin: 0 0.5rem 0 auto;
   color: #770303;
   display: none;
