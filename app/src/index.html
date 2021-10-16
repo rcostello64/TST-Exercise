@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TST Code Exercise</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body onload="app.init()">
+    <main>
+      <form onsubmit="return false;">
+        <fieldset>
+          <div>
+            <label id="userNameField" for="username">
+              <div>
+                Username*
+                <img class="valid" src="check.png" alt="check" />
+                <span class="invalid">invalid</span>
+              </div>
+
+              <input id="username" type="text" name="username" maxlength="12" />
+            </label>
+          </div>
+
+          <div>
+            <label id="passwordField" for="password">
+              <div>
+                Password*
+                <img class="valid" src="check.png" alt="check" />
+                <span class="invalid">invalid</span>
+              </div>
+
+              <input
+                id="password"
+                type="password"
+                name="password"
+                maxlength="12"
+              />
+            </label>
+          </div>
+
+          <div>
+            <label id="confirmPasswordField" for="confirmPassword">
+              <div>
+                Confirm Password*
+                <img class="valid" src="check.png" alt="check" />
+                <span class="invalid">invalid</span>
+              </div>
+
+              <input
+                id="confirmPassword"
+                type="password"
+                name="confirmPassword"
+                maxlength="12"
+              />
+              <div class="pwMatch">passwords do not match</div>
+            </label>
+          </div>
+
+          <button id="submit">Submit</button>
+
+          <div class="instructions">
+            <p>Username must</p>
+            <ul>
+              <li>be eight to twelve characters</li>
+              <li>contain only letters and numbers</li>
+            </ul>
+          </div>
+
+          <div class="instructions">
+            <p>Passwords must</p>
+            <ul>
+              <li>be eight to twelve characters</li>
+              <li>contain at least one digit</li>
+              <li>contain at least one lowercase letter</li>
+              <li>contain at least one uppercase letter</li>
+            </ul>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
